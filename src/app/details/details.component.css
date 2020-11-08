@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: center;
+   
+  }
+
+  mat-card {
+    letter-spacing: 1px !important;
+    font-family: cursive !important;
+  }
+
+  .mat-button{
+      font-size: x-large !important;
+  }

@@ -13,12 +13,9 @@ export class AppComponent {
   floatLabelControl = new FormControl('auto');
 
   constructor(fb: FormBuilder) {
-    this.options = fb.group({
-      hideRequired: this.hideRequiredControl,
-      floatLabel: this.floatLabelControl,
-    });
   }
 
+  isLinear = true; 
   interests = [];
 
   formGroup = new FormGroup({ secondCtrl: new FormControl(''), })
@@ -30,4 +27,9 @@ export class AppComponent {
     ];
   }
 
+  updateIssubmit(value)
+{
+  this.options = value;
+
+}
 }

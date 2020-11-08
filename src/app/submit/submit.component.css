@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: center;
+  }
+ 
+  .oblique {
+    font-style: oblique;
+    font-size: xx-large;
+  }
+  img {
+    border-radius: 8px;
+  }

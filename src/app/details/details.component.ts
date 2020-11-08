@@ -15,7 +15,6 @@ export class DetailsComponent implements OnInit {
   }
 
   video() {
-    console.log('im Play!');
-    this.videoplayer?.Play();
+    // this.videoplayer?.Play();
   }
 }
