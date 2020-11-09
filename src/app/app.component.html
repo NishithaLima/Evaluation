@@ -4,7 +4,7 @@
     <span>SIMFIC Evaluation Portal</span>
   </mat-toolbar-row>
 </mat-toolbar>
-<mat-horizontal-stepper [linear]="isLinear" #stepper>
+<!-- <mat-horizontal-stepper [linear]="isLinear" #stepper>
 
   <ng-template matStepperIcon="edit">
 		<mat-icon>bubble_chart</mat-icon>
@@ -18,19 +18,19 @@
 	</ng-template>
 	<ng-template matStepperIcon="last">
 		<mat-icon>done_all</mat-icon>
-	</ng-template>
-  
-	<mat-step label="About SIMFIC" state="home">
-    <app-details></app-details>
+	</ng-template> -->
+  <app-details></app-details>
+	<!-- <mat-step label="About SIMFIC" state="home">
+    
     <button mat-button matStepperNext>Next</button>
-	</mat-step>
+	</mat-step> -->
 
-  <mat-step label="Questionnaire" state="form" [stepControl]="options">
+  <!-- <mat-step label="Questionnaire" state="form" [stepControl]="options">
     <app-questionnaire (isSubmit) ="updateIssubmit($event)" ></app-questionnaire>
-    <!-- <div>
+    <div>
       <button mat-button matStepperPrevious>Back</button>
     </div> -->
-  </mat-step>
+  <!-- </mat-step>
 
   <mat-step label="Done" state="last">
    <app-submit></app-submit>
@@ -40,4 +40,4 @@
     </div>
   </mat-step>
 
-</mat-horizontal-stepper>
+</mat-horizontal-stepper> -->
