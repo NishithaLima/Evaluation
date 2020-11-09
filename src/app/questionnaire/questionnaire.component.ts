@@ -72,17 +72,15 @@ export class QuestionnaireComponent implements OnInit {
     this.isSubmit.emit(this.questionForm);
     this.reactiveForm()
     let responses = questions.responses.a;
-    // console.log(responses);
-
   }
 
   /* Reactive form */
   reactiveForm() {
     this.questionForm = this.fb.group({
-      a11: ['', [Validators.required]],
-      a12: ['', [Validators.required]],
-      a13: ['', [Validators.required]],
-      a14: ['', [Validators.required]],
+      // a11: ['', [Validators.required]],
+      // a12: ['', [Validators.required]],
+      // a13: ['', [Validators.required]],
+      // a14: ['', [Validators.required]],
       a21a: ['', [Validators.required]],
       a21b: ['', [Validators.required]],
       a23a: ['', [Validators.required]],
@@ -92,11 +90,11 @@ export class QuestionnaireComponent implements OnInit {
       a32b: ['', [Validators.required]],
       a33a: ['', [Validators.required]],
       a33b: ['', [Validators.required]],
-      a41a: ['', [Validators.required]],
-      a41b: ['', [Validators.required]],
-      a42b: ['', [Validators.required]],
-      a43a: ['', [Validators.required]],
-      a43b: ['', [Validators.required]],
+      // a41a: ['', [Validators.required]],
+      // a41b: ['', [Validators.required]],
+      // a42b: ['', [Validators.required]],
+      // a43a: ['', [Validators.required]],
+      // a43b: ['', [Validators.required]],
       b1a: [''], b1b: [''], b2a: [''], b2b: [''], b3a: [''], b3b: [''],
       c1: ['', [Validators.required]],
       c2: ['', [Validators.required]],
@@ -267,11 +265,10 @@ export class QuestionnaireComponent implements OnInit {
 
   submitForm() {
     var uid = this.generateUniqueId();
-
-    var inputText = this.questionForm.get('a11').value + ';' + this.questionForm.get('a12').value + ';' + this.questionForm.get('a13').value + ';' + this.questionForm.get('a14').value
-    + ';' +  this.questionForm.get('a21a').value  + ';' +  this.questionForm.get('a21b').value  + ';' +  this.questionForm.get('a23a').value + ';' + this.questionForm.get('a23b').value
+    // this.questionForm.get('a11').value + ';' + this.questionForm.get('a12').value + ';' + this.questionForm.get('a13').value + ';' + this.questionForm.get('a14').value
+    var inputText =   this.questionForm.get('a21a').value  + ';' +  this.questionForm.get('a21b').value  + ';' +  this.questionForm.get('a23a').value + ';' + this.questionForm.get('a23b').value
     + ';' +  this.questionForm.get('a31a').value  + ';' +  this.questionForm.get('a31b').value  + ';' +  this.questionForm.get('a33a').value + ';' + this.questionForm.get('a33b').value
-    + ';' +  this.questionForm.get('a41a').value  + ';' +  this.questionForm.get('a41b').value  + ';' +  this.questionForm.get('a43a').value + ';' + this.questionForm.get('a43b').value
+    // + ';' +  this.questionForm.get('a41a').value  + ';' +  this.questionForm.get('a41b').value  + ';' +  this.questionForm.get('a43a').value + ';' + this.questionForm.get('a43b').value
     + ';' + this.b1a?.map(x => x.value).join(',')  + ';' + this.b1b?.map(x => x.value).join(',')  + ';' + this.b2a?.map(x => x.value).join(',') + ';' +this.b2b?.map(x => x.value).join(',')  + ';' + this.b3a?.map(x => x.value).join(',')  + ';' + this.b3b?.map(x => x.value).join(',')   
     + ';' +  this.questionForm.get('c1').value + ';' +  this.questionForm.get('c2').value + ';' +  this.questionForm.get('c3').value 
     + ';' + this.c1a?.map(x => x.value).join(',')   + ';' + this.c1b?.map(x => x.value).join(',')  + ';' +this.c2a?.map(x => x.value).join(',')+ ';' + this.c2b?.map(x => x.value).join(',')  + ';' +this.c3a?.map(x => x.value).join(',') + ';' + this.c3b?.map(x => x.value).join(',')
@@ -280,9 +277,11 @@ export class QuestionnaireComponent implements OnInit {
     + ';' +  this.questionForm.get('da41').value + ';' +  this.questionForm.get('da42').value + ';' +  this.questionForm.get('da43').value
   
     console.log(inputText);
+   
    // if(!this.questionForm.valid){
       this.isSubmit.emit(this.questionForm);
-      this.SaveUserEvaluationData(uid + ';'+ inputText).subscribe(data => {
+      let evalData = uid + ';'+ inputText ;
+      this.SaveUserEvaluationData(evalData).subscribe(data => {
         console.log(data);
       }, error =>{
         console.log("Error in saving Evaluation Data");
