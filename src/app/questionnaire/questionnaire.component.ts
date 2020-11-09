@@ -72,7 +72,7 @@ export class QuestionnaireComponent implements OnInit {
     this.isSubmit.emit(this.questionForm);
     this.reactiveForm()
     let responses = questions.responses.a;
-    console.log(responses);
+    // console.log(responses);
 
   }
 
@@ -279,7 +279,7 @@ export class QuestionnaireComponent implements OnInit {
     + ';' +  this.questionForm.get('d1').value  + ';' +  this.questionForm.get('da1').value + ';' +  this.questionForm.get('da2').value + ';' +  this.questionForm.get('da3').value
     + ';' +  this.questionForm.get('da41').value + ';' +  this.questionForm.get('da42').value + ';' +  this.questionForm.get('da43').value
   
-
+    console.log(inputText);
    // if(!this.questionForm.valid){
       this.isSubmit.emit(this.questionForm);
       this.SaveUserEvaluationData(uid + ';'+ inputText).subscribe(data => {
