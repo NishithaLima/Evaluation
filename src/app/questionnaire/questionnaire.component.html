@@ -63,13 +63,13 @@
 
     <!-- ------------------------------------Task 2------------------------------------------------------- -->
 
-    <h2>Task 1: Reasoning explanations given search results </h2>
+    <!-- <h2>Task 1: Reasoning explanations given search results </h2>
     <p> Users' belief about explanations might be different than what the system provides. Our
       system doesn't provide too verbose textual explanations and also the actual explanation might differ as the user
       might see different books in search results than he intended. We would like to tell users that our explanations
-      are more like clues and features that led to search results than the user believed the reason.</p>
+      are more like clues and features that led to search results than the user believed the reason.</p> -->
     <mat-card>
-      <p>Given a book <b>"A Christmas Carol"</b> with its descriptions and top 3 most similar and top 3 most dissimilar
+      <p>Given a book <b>"A Christmas Carol"</b> and top 3 most similar and top 3 most dissimilar
         search results. Why do you think that these results are likely, Pick your top 3 choices for similar and
         dissimilar ?
       </p>
@@ -137,7 +137,7 @@
     <mat-card>
 
       <p>
-        Given a book <b>"Justice"</b> with its descriptions and top 3 most similar and top 3 most dissimilar search
+        Given a book <b>"Justice"</b>  and top 3 most similar and top 3 most dissimilar search
         results. Why do you think that these results are likely, Pick your top 3 choices for similar and dissimilar
         results ?
       </p>
@@ -178,11 +178,11 @@
 
 
     <!-- ------------------------------------ Task 3--------------------------------------------------------- -->
-    <h2>Task 2: Reasoning Search results given explanation
+    <!-- <h2>Task 2: Reasoning Search results given explanation
     </h2>
     <p> Mental model around Users ability to trust in explanations given search results. We will
       make user do a reverse exercise and ask user to extrapolate search results given our explanation.
-    </p>
+    </p> -->
     <mat-card>
 
       <p>Given a book <b>"Sense and Sensibility"</b> with its explanations, pick the top 3 most likely and top 3 most
@@ -335,9 +335,9 @@
 
     <!-- ----------------------------- User Trust and Satisfaction -------------------------------- -->
     <h1>2. User Trust and Satisfaction </h1><br>
-    <h2> Task </h2>
+    <!-- <h2> Task </h2> -->
     <mat-card>
-      <mat-card-title>
+      <!-- <mat-card-title> -->
         Select the book “Emma” by Jane Austen and search for its results.
 
         Now, take a look at the search results provided by System 1, 2 and 3.
@@ -348,7 +348,7 @@
           for System 1:
 
         </p>
-      </mat-card-title>
+      <!-- </mat-card-title> -->
 
     </mat-card>
     <ol>
@@ -383,7 +383,7 @@
     </ol>
 
     <mat-card>
-      <mat-card-title>On a scale of 1 to 5, provide your responses for the following for System 2:</mat-card-title>
+      <mat-card-title>On a scale of 1 to 5 ( 1 being the lowest and 5 being the highest), provide your responses for the following for System 2:</mat-card-title>
     </mat-card>
     <ol>
       <li *ngFor="let item of responses_a">{{item}}
@@ -418,7 +418,7 @@
     </ol>
 
     <mat-card>
-      <mat-card-title>On a scale of 1 to 5, provide your responses for the following for System 3:
+      <mat-card-title>On a scale of 1 to 5 ( 1 being the lowest and 5 being the highest), provide your responses for the following for System 3:
       </mat-card-title>
     </mat-card>
     <ol>
@@ -459,7 +459,7 @@
     <h2>Task</h2>
     <p>(Note -</p>
     <ol>
-      <li>Note 1:
+      <li>
         Textual (global) explanation refers to the line of text at the top of the result list that explains the top
         aspects/features responsible for the results
       </li>
@@ -506,7 +506,7 @@
     </mat-form-field><br />
 
     <mat-card>
-      <mat-card-title>On a scale of 1 to 5, provide your responses for the following for System 1:
+      <mat-card-title>Having seen the explanations now, provide your responses for the following questions for System 1 on a scale of 1 to 5 (1 being the lowest, 5 being the highest) :
       </mat-card-title>
     </mat-card>
     <ol>
@@ -542,7 +542,7 @@
     </ol>
 
     <mat-card>
-      <mat-card-title>On a scale of 1 to 5, provide your responses for the following for System 2:
+      <mat-card-title>Having seen the explanations now, provide your responses for the following questions for System 2 on a scale of 1 to 5 (1 being the lowest, 5 being the highest) :
       </mat-card-title>
     </mat-card>
     <ol>
@@ -578,7 +578,7 @@
     </ol>
 
     <mat-card>
-      <mat-card-title>On a scale of 1 to 5, provide your responses for the following for System 3:
+      <mat-card-title>Having seen the explanations now, provide your responses for the following questions for System 3 on a scale of 1 to 5 (1 being the lowest, 5 being the highest) :
       </mat-card-title>
     </mat-card>
     <ol>
@@ -662,7 +662,8 @@
         <li>Search for a desired book -<b> “Alice in Wonderland”</b></li>
         <li>Explore the results - which is the 7th result?</li>
         <li>Have a look at the summary </li>
-        <li>If you are curious about a particular book, check the compare button</li>
+        <li>If you are curious about a particular book, check the visual explanations and then the “Graphical Comparison” button
+        </li>
       </ol>
     </mat-card>
 
